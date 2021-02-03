@@ -1,89 +1,149 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #33cccc;
-}
+	<style>
 
-li {
-  float: right;
-}
+		.preHeader {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #828282;
+			border-bottom: 2px solid white;
+		}
 
-li a, .dropbtn {
-  display: inline-block;
-  color: white;
-  font-size: 27px;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+		.header {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #33cccc;
+		}
 
-li a:hover, .dropdown:hover .dropbtn {
-  background-color: #bfbfbf;
-}
+		.mainContent{
+			max-width: 1100px;
+			margin: auto;
+			border: 3px solid #003366;
+			background-color: #99ccff;
+			/*padding-bottom: 245px; /* Height of the footer element */
+		}
 
-li.dropdown {
-  display: inline-block;
-}
+		.pageBackground{
+			background-color: #cfcfcf;
+		}
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+		li {
+			float: right;
+		}
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  font-size:18px;
-}
+		li a, .dropbtn {
+			display: inline-block;
+			color: white;
+			font-size: 27px;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
 
-.navName {
-  display: inline-block;
-  color: white;
-  font-size: 37px;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+		li a:hover, .dropdown:hover .dropbtn {
+			background-color: #bfbfbf;
+		}
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+		li.dropdown {
+			display: inline-block;
+		}
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-</style>
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			text-align: left;
+			font-size:18px;
+		}
+
+		.navName {
+			display: inline-block;
+			color: white;
+			font-size: 37px;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		.dropdown-content a:hover {background-color: #f1f1f1;}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+		.footer {
+			position:relative;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			background-color: red;
+			color: white;
+			text-align: center;
+			height: 90px;
+			font-size: 50px;
+
+		}
+	</style>
 </head>
-<body>
+<body class = "pageBackground">
+	<div class="mainContent">
+		<div class = "preHeader"> 
+			<a>Info</a>
+		</div>
+		<ul class ="header">
+			<div class ="navName"> NAME </div>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+				<div class="dropdown-content">
+					<a href="#">Link 1</a>
+					<a href="#">Link 2</a>
+					<a href="#">Link 3</a>
+				</div>
+				<li><a href="#news">News</a></li>
+				<li><a href="#home">Home</a></li>
+			</li>
+		</ul>
 
+		<h2>Dropdown Menu inside a Navigation Bar</h3>
+			<h3>Hover over the "Dropdown" link to see the dropdown menu.</h3> 
+			<br> <h4>Lorem ipsum dolor sit amet, ei tantas nominavi vis, ad magna possit mea. Ne duo saepe explicari. Laudem alienum et ius. Vel ei maiestatis definiebas. Mundi soleat voluptua vis ei.<br>
+				<br>
+				Est cu sale mutat habemus. Ex esse menandri eum, et per prima persequeris. Et his iusto conclusionemque, duis instructior consequuntur id vel, essent animal salutatus ex mei. An eum adhuc viderer euripidis, his ex eius temporibus, epicurei adversarium dissentiunt sed in.<br>
+				<br>
+				Vidisse suscipit mel ex, nam et dicam vocibus, ei enim option consequat sit. Mea ne alia vero mollis. Sit vidit nonumes ea, sale posse aliquip mea at. Eu porro nonumy lobortis pro, natum vidisse reformidans an nec.<br>
+				<br>
+				Doctus temporibus mea id, ei vis dicam salutandi. Ea vidisse volutpat mediocrem usu. Porro impetus aliquam an sea. Cu sit facer dicam, qui at esse debitis. Eos et offendit sententiae, mea voluptua repudiare splendide cu.<br>
+				<br>
+				At erant assentior pro, cum case lorem an. Elitr elaboraret no nam, quod nominavi dissentias eu vis. Choro albucius accusata vim in. Vel euismod ponderum cotidieque et, paulo verear laoreet eos ad. At usu vocibus accusamus, iriure docendi et per. Per sanctus dolorum temporibus an, nam eu mundi adversarium.<br>
+				<br>
+				Justo abhorreant ut est, cu duo harum ancillae adipisci, saperet evertitur ad eam. Ex ferri mutat reprehendunt sit, te usu tation epicuri. No fugit detraxit argumentum sed, ex vix dolorem tacimates mediocritatem. Ridens denique efficiantur an ius, possit habemus eu nec. Ne primis debitis qui, suas nibh per in.<br>
+				<br>
+				Esse putant maluisset sit an, ei vel integre omnesque. No usu ipsum summo, sea modus euismod ea. Usu quot utamur ne. His cu posse volumus contentiones. Definiebas comprehensam et qui. Per civibus periculis deterruisset ei, equidem legimus periculis mea cu.<br>
+				<br>
+				Molestie adipiscing per et, illum causae similique duo no, quo id atqui civibus. Fastidii aliquando et has. Mei cu noster appetere periculis, ea vel dicat albucius. Vis praesent ullamcorper disputationi ea. Qui cu modo nihil, cu partem incorrupte nam.<br>
+				<br>
+				Eos ad sale atqui, eos ei esse democritum. Id illud omnium argumentum pri. Ad sed alterum fierent albucius, sed purto accusam posidonium at. Ad sit everti scaevola suavitate, ea recusabo gloriatur vel, ex qui timeam definitiones.<br>
 
-<ul>
-<div class ="navName"> NAME </div>
-  <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-    <li><a href="#news">News</a></li>
-    <li><a href="#home">Home</a></li>
-  </li>
-</ul>
+				Ea est denique laboramus. Simul fabulas ad mei. Labores debitis duo ea, per ad paulo imperdiet, his et lucilius platonem mandamus.<br>
+				<br> No lorem inani timeam sed. Eu suscipit sensibus eloquentiam mea, at incorrupte dissentias eum, mel ea essent delicata intellegam. Summo quidam mel an, sea vidit maluisset constituto id, cu pri simul elitr reprehendunt.</h4>
 
-<h3>Dropdown Menu inside a Navigation Bar</h3>
-<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
-
-</body>
-</html>
+				<div class="footer">
+					<p>Footer</p>
+				</div>
+			</div>
+		</body>
+		</html>

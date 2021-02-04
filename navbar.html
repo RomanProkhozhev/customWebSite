@@ -1,15 +1,29 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html>
 <head>
+	<meta charset="UTF-8">
 	<style>
 
 		.preHeader {
 			list-style-type: none;
-			margin: 0;
-			padding: 0;
+			/*margin: 0;*/
+			padding: 3px;
 			overflow: hidden;
-			background-color: #828282;
-			border-bottom: 2px solid white;
+			background-color: #293334;
+			color: white;
+			text-align: right;
+			/*border-bottom: 2px solid white;*/
+			font-family: Helvetica;
+		}
+
+		.preHeader a{
+			text-decoration: none;
+			color:white;
+		}
+
+		.preHeader a:hover {
+			background-color: #bfbfbf;
+			color:black;
 		}
 
 		.header {
@@ -17,19 +31,99 @@
 			margin: 0;
 			padding: 0;
 			overflow: hidden;
-			background-color: #33cccc;
+			/*color:black;*/
+			background-color: white;
 		}
 
-		.mainContent{
+		.image {
+			position: relative;
+			text-align: center;
+			color: white;
+			font-size: 30px;
+		}
+
+		.image a{
+			text-decoration: none;
+			color:white;
+		}
+
+		.image a:hover {
+			background-color: white;
+			color:black;
+		}
+
+		.polaroid {
+			
+			width: 20%;
+			background-color: white;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			margin:24px;
+			margin-left: 90px;
+		}
+		.polaroidText {
+			text-align: center;
+			padding: 10px 20px;
+		}
+		.polaroidContainer {
+			display: flex;
+			/*grid-template-columns: auto auto auto;*/
+		}
+
+		.mainSloganOnImg {
+			position: absolute;
+			top: 7%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 57px;
+			font-family: "Times New Roman";
+		}
+		.txtUnderMainSloganOnImg {
+			position: absolute;
+			top: 17%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 27px;
+			font-family: "Times New Roman";
+			color: white;
+		}
+		.readMore {
+			position: absolute;
+			top: 92%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-family: sans-serif;
+		}
+		
+
+		.itemList{
 			max-width: 1100px;
 			margin: auto;
-			border: 3px solid #003366;
-			background-color: #99ccff;
+			background-color: white; 
 			/*padding-bottom: 245px; /* Height of the footer element */
 		}
 
 		.pageBackground{
-			background-color: #cfcfcf;
+			background-color: #c6cfd2;
+			margin: 0;
+			padding: 0;
+		}
+
+		h2 {
+			margin-top: 0;
+			text-align: center;
+			font-family: sans-serif;
+		}
+
+		h3 {
+			margin-top: 0;
+			text-align: center;
+			font-family: Verdana;
+		}
+
+		h4 {
+			margin-top: 0;
+			text-align: center;
+			font-family: Verdana;
 		}
 
 		li {
@@ -38,7 +132,7 @@
 
 		li a, .dropbtn {
 			display: inline-block;
-			color: white;
+			color: black;
 			font-size: 27px;
 			text-align: center;
 			padding: 14px 16px;
@@ -46,13 +140,20 @@
 		}
 
 		li a:hover, .dropdown:hover .dropbtn {
-			background-color: #bfbfbf;
+			background-color: black;
+			color: white;
 		}
+
+		.polaroid:hover {
+			background-color: #bfbfbf;
+			opacity: 0.7;
+		}
+
 
 		li.dropdown {
 			display: inline-block;
 		}
-
+		
 		.dropdown-content {
 			display: none;
 			position: absolute;
@@ -71,16 +172,24 @@
 			font-size:18px;
 		}
 
+		.polaroid a {
+			color: black;
+			text-decoration: none;
+		}
+
 		.navName {
 			display: inline-block;
-			color: white;
+			color: black;
 			font-size: 37px;
 			text-align: center;
 			padding: 14px 16px;
 			text-decoration: none;
 		}
 
-		.dropdown-content a:hover {background-color: #f1f1f1;}
+		.dropdown-content a:hover {
+			background-color: black;
+			color: white;
+		}
 
 		.dropdown:hover .dropdown-content {
 			display: block;
@@ -90,60 +199,188 @@
 			left: 0;
 			bottom: 0;
 			width: 100%;
-			background-color: red;
+			background-color: #333;
 			color: white;
-			text-align: center;
-			height: 90px;
-			font-size: 50px;
-
+			height: 250px;
+			font-size: 15px;
+			border-top: 3px solid #b3b3b3;
+		}
+		.footerTxtLeft {
+			position: absolute;
+			top: 50%;
+			left: 20%;
+			transform: translate(-50%, -50%);
+		}
+		.footerTxtRight {
+			position: absolute;
+			top: 50%;
+			right: 20%;
+			transform: translate(-50%, -50%);
+		}
+		.footer h2 {
+			border-bottom: 2px solid white;
+			font-family: inherit;
+		}
+		.footer a{
+			text-decoration: none;
+			color: white;
+			font-size: 18px;
+		}
+		.footer a:hover {
+			color: black;
+		}
+		.afterFooter{
+			position:relative;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			background-color: #333;
+			color: white;
+			height: 15px;
+			font-size: 15px;
+			border-top: 1px solid #444;
+			font-family: Courier New;
+			text-align: right;
+		}
+		.pagesNav{
+			position:relative;
+			left: 39.5%;
+			bottom: 50%;
+			right: 40%
+			transform: translate(-50%, -50%);
+			color: black;
+			height: 30px;
+			width: 200px;
+			font-size: 30px;
+			border: 1px solid #444;
+			font-family: Courier New;
+		}
+		.pagesNav a{
+			color: black;
+			text-decoration: none;
+		}
+		.pagesNav a:hover{
+			background-color: black;
+			color:white;
 		}
 	</style>
 </head>
 <body class = "pageBackground">
-	<div class="mainContent">
+	<div class="itemList">
 		<div class = "preHeader"> 
-			<a>Info</a>
+			<a href="#">Info</a>
+			&nbsp;
+			<a href="#">Ota Yhteyttä</a>
 		</div>
+		
 		<ul class ="header">
-			<div class ="navName"> NAME </div>
+			<a href="#"><div class ="navName"> Kellot Oy </div></a>
 			<li class="dropdown">
-				<a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+				<a href="javascript:void(0)" class="dropbtn">Valikoima</a>
 				<div class="dropdown-content">
-					<a href="#">Link 1</a>
-					<a href="#">Link 2</a>
-					<a href="#">Link 3</a>
+					<a href="#">Käsikellot</a>
+					<a href="#">Isot kellot</a>
+					<a href="#">Lux-kellot</a>
 				</div>
-				<li><a href="#news">News</a></li>
-				<li><a href="#home">Home</a></li>
+				<li><a href="#">Meistä</a></li>
+				<li><a href="#home">Kotisuvu</a></li>
 			</li>
 		</ul>
+		<div class="image">
+			<img src="main.jpg" alt="main Image" width="1100" height="400">
+			<div class="mainSloganOnImg">Valikoituja valikoimia</div>
+			<div class="txtUnderMainSloganOnImg">*Slogan on generoitu aalho.fi sivulla </div>
+			<a href=""><div class="readMore">LUE LISÄÄ</div></a>
+		</div>
 
-		<h2>Dropdown Menu inside a Navigation Bar</h3>
-			<h3>Hover over the "Dropdown" link to see the dropdown menu.</h3> 
-			<br> <h4>Lorem ipsum dolor sit amet, ei tantas nominavi vis, ad magna possit mea. Ne duo saepe explicari. Laudem alienum et ius. Vel ei maiestatis definiebas. Mundi soleat voluptua vis ei.<br>
-				<br>
-				Est cu sale mutat habemus. Ex esse menandri eum, et per prima persequeris. Et his iusto conclusionemque, duis instructior consequuntur id vel, essent animal salutatus ex mei. An eum adhuc viderer euripidis, his ex eius temporibus, epicurei adversarium dissentiunt sed in.<br>
-				<br>
-				Vidisse suscipit mel ex, nam et dicam vocibus, ei enim option consequat sit. Mea ne alia vero mollis. Sit vidit nonumes ea, sale posse aliquip mea at. Eu porro nonumy lobortis pro, natum vidisse reformidans an nec.<br>
-				<br>
-				Doctus temporibus mea id, ei vis dicam salutandi. Ea vidisse volutpat mediocrem usu. Porro impetus aliquam an sea. Cu sit facer dicam, qui at esse debitis. Eos et offendit sententiae, mea voluptua repudiare splendide cu.<br>
-				<br>
-				At erant assentior pro, cum case lorem an. Elitr elaboraret no nam, quod nominavi dissentias eu vis. Choro albucius accusata vim in. Vel euismod ponderum cotidieque et, paulo verear laoreet eos ad. At usu vocibus accusamus, iriure docendi et per. Per sanctus dolorum temporibus an, nam eu mundi adversarium.<br>
-				<br>
-				Justo abhorreant ut est, cu duo harum ancillae adipisci, saperet evertitur ad eam. Ex ferri mutat reprehendunt sit, te usu tation epicuri. No fugit detraxit argumentum sed, ex vix dolorem tacimates mediocritatem. Ridens denique efficiantur an ius, possit habemus eu nec. Ne primis debitis qui, suas nibh per in.<br>
-				<br>
-				Esse putant maluisset sit an, ei vel integre omnesque. No usu ipsum summo, sea modus euismod ea. Usu quot utamur ne. His cu posse volumus contentiones. Definiebas comprehensam et qui. Per civibus periculis deterruisset ei, equidem legimus periculis mea cu.<br>
-				<br>
-				Molestie adipiscing per et, illum causae similique duo no, quo id atqui civibus. Fastidii aliquando et has. Mei cu noster appetere periculis, ea vel dicat albucius. Vis praesent ullamcorper disputationi ea. Qui cu modo nihil, cu partem incorrupte nam.<br>
-				<br>
-				Eos ad sale atqui, eos ei esse democritum. Id illud omnium argumentum pri. Ad sed alterum fierent albucius, sed purto accusam posidonium at. Ad sit everti scaevola suavitate, ea recusabo gloriatur vel, ex qui timeam definitiones.<br>
-
-				Ea est denique laboramus. Simul fabulas ad mei. Labores debitis duo ea, per ad paulo imperdiet, his et lucilius platonem mandamus.<br>
-				<br> No lorem inani timeam sed. Eu suscipit sensibus eloquentiam mea, at incorrupte dissentias eum, mel ea essent delicata intellegam. Summo quidam mel an, sea vidit maluisset constituto id, cu pri simul elitr reprehendunt.</h4>
-
-				<div class="footer">
-					<p>Footer</p>
-				</div>
+		<h2>Tervetuloa verkkokauppaan!</h2>
+		<h3>Meillä on tietenkin paras valikoima</h3> 
+		<h4>Tutustu:</h4>
+		<div class = "polaroidContainer">
+			<a href="#"><div class ="polaroid">
+				<img src="item1.jpg" alt="item1" style="width:100%">
+				<div class="polaroidText">Antikvaariset Kellot</div></a>
 			</div>
-		</body>
-		</html>
+			<a href="#"><div class ="polaroid">
+				<img src="item2.jpg" alt="item2" style="width:100%">
+				<div class="polaroidText">Moderni Kellot</div></a>
+			</div>
+			<a href="#"><div class ="polaroid">
+				<img src="item3.jpg" alt="item3" style="width:100%">
+				<div class="polaroidText">Seinäkellot</div></a>
+			</div>
+		</div>
+		<div class = "polaroidContainer">
+			<a href="#"><div class ="polaroid">
+				<img src="item4.jpg" alt="item4" style="width:100%">
+				<div class="polaroidText">Lattiakellot</div></a>
+			</div>
+			<a href="#"><div class ="polaroid">
+				<img src="item5.png" alt="item5" style="width:100%">
+				<div class="polaroidText">Vintage-rannekellot</div></a>
+			</div>
+			<a href="#"><div class ="polaroid">
+				<img src="item6.jpg" alt="item6" style="width:100%">
+				<div class="polaroidText">Urheilukellot</div></a>
+			</div>
+		</div>
+		<div class = "polaroidContainer">
+			<a href="#"><div class ="polaroid">
+				<img src="item7.jpg" alt="item7" style="width:100%">
+				<div class="polaroidText">Rolex Kellot</div></a>
+			</div>
+			<a href="5"><div class ="polaroid">
+				<img src="item8.jpg" alt="item8" style="width:100%">
+				<div class="polaroidText">Timanttiset Kellot</div></a>
+			</div>
+			<a href="6"><div class ="polaroid">
+				<img src="item9.jpg" alt="item9" style="width:100%">
+				<div class="polaroidText">Klassiset Kellot</div></a>
+			</div>
+		</div>
+		<div class="pagesNav">
+			<a href="#">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+			<a href="#">6</a>
+		</div>
+		<div class="footer">
+			<div class = footerTxtLeft>
+				<h2>Navigointi</h2>
+				<a href="#"> Kotisivu </a>
+				<br>
+				<br>
+				<a href="#">Meistä</a>
+				<br>
+				<br>
+				<a href="#">Valikoima</a>
+				<br>
+				<br>
+				<a href="#">Info</a>
+				<br>
+				<br>
+				<a href="#">Ota yhteyttä</a>
+			</div>
+			<div class = "footerTxtRight">
+				<h2>Seuraa meitä</h2>
+				<a href="#"> Twitter </a>
+				<br>
+				<br>
+				<a href="#">Instagram</a>
+				<br>
+				<br>
+				<a href="#">YouTube</a>
+				<br>
+				<br>
+				<a href="#">Facebook</a>
+				<br>
+				<br>
+				<a href="#">Pinterest</a>
+			</div>
+		</div>
+		<div class="afterFooter">Copyright©. All Rights Reserved. Made by Roman,Malik & Vera</div>
+	</div>
+</body>
+</html>

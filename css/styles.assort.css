@@ -1,0 +1,104 @@
+	.asPolaroid {
+		width: 100%;
+		background-color: white;
+		/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		/*margin:24px;
+		margin-left: 90px;*/
+	}
+	
+	.asPolaroidContainer {
+		display: flex;
+		/*grid-template-columns: auto auto auto;*/
+		position: relative;
+	}
+	.asPolaroid:hover {
+		background-color: #bfbfbf;
+		opacity: 0.9;
+	}
+	.asPolaroid a {
+		color: black;
+		text-decoration: none;
+	}
+	.asPolaroidTextLeft h6{
+		position: absolute;
+		top: 1%;
+		left: 20%;
+		transform: translate(-50%, -50%);
+		font-size: 49px;
+		font-family: 'Times New Roman', serif;
+		color: white;
+	}
+	.asPolaroidTextLeft h3{
+		position: absolute;
+		top: 50%;
+		left: 20%;
+		transform: translate(-50%, -50%);
+		font-size: 30px;
+		font-family: 'Times New Roman', serif;
+		color: white;
+	}
+	.asPolaroidTextLeft h4{
+		position: absolute;
+		top: 80%;
+		left: 20%;
+		transform: translate(-50%, -50%);
+		font-size: 35px;
+		font-family: 'Times New Roman', serif;
+		color: white;
+	}
+
+	.asPolaroidTextRight h6{
+		position: absolute;
+		top: 1%;
+		right: 2%;
+		transform: translate(-50%, -50%);
+		font-size: 35px;
+		font-family: 'Times New Roman', serif;
+		color: white;
+	}
+		.asPolaroidTextRight h3{
+		position: absolute;
+		top: 50%;
+		right: -15%;
+		transform: translate(-50%, -50%);
+		font-size: 30px;
+		font-family: 'Times New Roman', serif;
+		color: white;
+	} 
+	.asPolaroidTextRight h4{
+		position: absolute;
+		top: 80%;
+		right: 5%;
+		transform: translate(-50%, -50%);
+		font-size: 35px;
+		font-family: 'Times New Roman', serif;
+		color: white;
+	}
+	.asPolaroidTextCenter h6{
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 35px;
+		font-family: 'Times New Roman', serif;
+		color: white;
+	}
+		.asPolaroidTextCenter h3{
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 30px;
+		font-family: 'Times New Roman', serif;
+		color: white;
+	} 
+	.asPolaroidTextCenter h4{
+		position: absolute;
+		top: 83%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 35px;
+		font-family: 'Times New Roman', serif;
+		color: white;
+	}
+

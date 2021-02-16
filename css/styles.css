@@ -27,7 +27,7 @@
 		padding: 0;
 		overflow: hidden;
 		/*color:black;*/
-		background-color: white;
+		/*was: white*/
 		border-bottom: 4px solid #293334;
 	}
 
@@ -107,7 +107,8 @@
 	}
 
 	.pageBackground{
-		background-color: #c6cfd2;
+		/*background-color: #c6cfd2; /*was:  #c6cfd2;*/
+
 		margin: 0;
 		padding: 0;
 	}
@@ -260,3 +261,4 @@
 		background-color: black;
 		color:white;
 	}
+
